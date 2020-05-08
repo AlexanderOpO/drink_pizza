@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "../Header/Header";
 import Navbar from "../Navbar/Navbar";
-import A from './App.module.css';
+import styles from './App.module.css';
 import Deserts from "../Navbar/Deserts/Deserts";
 import Drinks from "../Navbar/Drinks/Drinks";
 import Pizzas from "../Navbar/Pizzas/Pizzas";
@@ -16,10 +16,10 @@ import HelpJUZEPPE from "../HelpJUZEPPE/HelpJUZEPPE";
 
 const App = (props) => {
     return (
-        <div className={A.app}>
+        <div className={styles.app}>
             <Header/>
             <Navbar/>
-            <div className={A.Path}>
+            <div className={styles.Path}>
                 <Route path='/Main' render={
                     () => <Main/>}/>
                 <Route path='/Deserts' render={

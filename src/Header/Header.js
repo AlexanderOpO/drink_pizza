@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import H from './Header.module.css'
 import {NavLink, Route} from "react-router-dom";
-import Aut from "../Aut/Aut";
-import fire from "../Aut/Fire";
+import Auth from "../Auth/Auth";
+import fire from "../Auth/Fire";
 import Main from "../Navbar/Main/Main";
 
 class Header extends Component {
@@ -29,7 +29,7 @@ class Header extends Component {
                 <div className={H.Aut}>
                     <button className="InputBtn" onClick={this.onLogIn.bind(this)}>Войти</button>
                 </div>
-                {this.state.isInputButton  ?  <Main/> : <Aut/> }
+                {this.state.isInputButton  ?  <Main/> : <Auth/> }
             </div>
         )
     }

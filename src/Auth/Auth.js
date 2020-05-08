@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Aut.css'
+import './Auth.css'
 import LoginRegister from "./LoginRegister";
 import Main from "../Navbar/Main/Main";
 import fire from "./Fire";
@@ -7,8 +7,8 @@ import App from "../App/App";
 
 
 export default class Aut extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             user: null
         }
@@ -18,11 +18,8 @@ export default class Aut extends Component {
     }
     authListener() {
         fire.auth().onAuthStateChanged((user) => {
-                if (user) {
-                    this.setState({user});
-                } else {
-                    this.setState({user: null});
-                }
+                if (user) this.setState({user});
+                else this.setState({user: null});
             }
         );
     }
