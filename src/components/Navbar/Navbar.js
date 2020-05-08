@@ -1,54 +1,29 @@
 import React from 'react';
-import NB from './Navbar.module.css'
+import styles from './Navbar.module.scss'
 import {NavLink} from "react-router-dom";
-import Reviews from "../../pages/Reviews/Reviews";
+import PRODUCTS_CONFIG from '@/const/products'
 
 const Navbar = () => {
 
     return (
-        <nav className={NB.N}>
-            <div className={NB.Nav}>
-                <NavLink className={NB.N1} to={"/"}>
-                    Главная страница
-                </NavLink>
-                <br/>
-                <br/>
-                <NavLink className={NB.N1} to={"/pizzas"}>
-                    Пиццы
-                </NavLink>
-                <br/>
-                <br/>
-                <NavLink className={NB.N1} to={"/deserts"}>
-                    Десерты
-                </NavLink>
-                <br/>
-                <br/>
-                <NavLink  className={NB.N1} to={"/drinks"}>
-                    Напитки
-                </NavLink>
-                <br/>
-                <br/>
-                <NavLink  className={NB.N1} to={"/salads"}>
-                    Салаты
-                </NavLink>
-                <br/>
-                <br/>
-                <NavLink  className={NB.N1} to={"/souces"}>
-                    Соусы
-                </NavLink>
-                <br/>
-                <br/>
-                <NavLink className={NB.N1}  to={"/reviews"}>
-                     Отзывы
-                </NavLink>
-                <br/>
-                <br/>
-                <NavLink className={NB.N1} to={"/help_juzeppe"}>
-                    Помоги Джузеппе
-                </NavLink>
-                <br/>
-                <br/>
-            </div>
+        <nav className={styles.root}>
+            <NavLink className={styles.item} to={"/"}>
+                Главная страница
+            </NavLink>
+            {
+                PRODUCTS_CONFIG.map(({path, name}, index) => (
+                    <NavLink 
+                        className={styles.item}
+                        to={`${path}`}
+                        key={`nav-item_${index}`}>{name}</NavLink>
+                ))
+            }
+            <NavLink className={styles.item}  to={"/reviews"}>
+                Отзывы
+            </NavLink>
+            <NavLink className={styles.item} to={"/help_juzeppe"}>
+                Помоги Джузеппе
+            </NavLink>
         </nav>
     )
 };

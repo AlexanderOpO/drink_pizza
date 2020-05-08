@@ -1,7 +1,7 @@
 import React from 'react';
 import M from './Main.module.css'
-import About from "./components/About/About";
-import Sliderimages from "./components/Popular/Sliderimages";
+import About from "./components/About";
+import Sliderimages from "./components/Slider";
 
 const Main = () => {
     return (

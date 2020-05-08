@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Slider from "react-slick";
+import SlickSlider from "react-slick";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Main3 from '@/assets/images/main3.jpg'
@@ -18,7 +18,7 @@ const Photos = [
         p1: Main1
     }
 ]
-class Sliderimages extends Component
+class Slider extends Component
 {
     render() {
     const Settings = {
@@ -34,7 +34,7 @@ class Sliderimages extends Component
     }
     return(
             <div className="Slider">
-                <Slider{...Settings}>
+                <SlickSlider{...Settings}>
                     {Photos.map((ph) => {
                             return (
                                 <div>
@@ -42,8 +42,9 @@ class Sliderimages extends Component
                                 </div>
                             )
                     })}
-                </Slider>
+                </SlickSlider>
             </div>
     )
 }}
-export default Sliderimages;
+
+export default Slider;
