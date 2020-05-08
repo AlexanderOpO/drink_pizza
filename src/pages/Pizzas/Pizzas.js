@@ -1,7 +1,7 @@
 import React from 'react';
 import P from './Pizzas.module.css'
 import Pizza from "./Pizza/Pizza";
-import P1 from "../../images/bavarskaya.jpg";
+import P1 from "@/assets/images/bavarskaya.jpg";
 
 const Pizzas = (props) => {
     let PizzasElements = props.Pizzas.map(p => <Pizza id={p.id} photo={p.photo} title={p.title}

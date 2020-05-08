@@ -1,6 +1,6 @@
 import React from 'react';
 import D from './Drinks.module.css'
-import Drink from './Drink/Drink'
+import Drink from './components/Drink/Drink'
 
 const  Drinks = (props) => {
     let  DrinksElements = props.Drinks.map(d => <Drink id={d.id} photo={d.photo} title={d.title}

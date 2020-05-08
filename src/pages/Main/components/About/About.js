@@ -1,8 +1,8 @@
 import React from 'react';
 import Abb from './About.module.css'
-import make from '../../../images/izgotovlenie.jpg'
-import veg from '../../../images/veg.jpg'
-import curer from '../../../images/curer.jpg'
+import make from '@/assets/images/izgotovlenie.jpg'
+import veg from '@/assets/images/veg.jpg'
+import curer from '@/assets/images/curer.jpg'
 
 const About = () => {
     return (

@@ -1,10 +1,10 @@
 import React from 'react';
 import D from './Deserts.module.css'
-import Desert from "./Desert/Desert";
+import Desert from "./components/Desert";
 
 const  Deserts = (props) => {
-    let DesertsElements = props.Deserts.map(d => <Desert id={d.id} photo={d.photo} title={d.title}
-                                                       decription={d.description} price={d.price}/>);
+    let DesertsElements = props.Deserts.map(d => <Desert    id={d.id} photo={d.photo} title={d.title}
+                                                            decription={d.description} price={d.price}/>);
     return (
         <div className={D.Des}>
             <div className={D.Head}>
@@ -17,7 +17,6 @@ const  Deserts = (props) => {
                 </div>
             </div>
         </div>
-
     )
 };
 

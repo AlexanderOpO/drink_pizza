@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import Main3 from '../../../images/main3.jpg'
-import Main2 from '../../../images/Main2.jpg'
-import Main1 from '../../../images/main1.webp'
+import Main3 from '@/assets/images/main3.jpg'
+import Main2 from '@/assets/images/main2.jpg'
+import Main1 from '@/assets/images/main1.webp'
 import './Slider.css'
 
 const Photos = [

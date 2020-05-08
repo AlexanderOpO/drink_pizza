@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import fire from "./Fire";
+import fire from "./firebase";
 
 class LoginRegister extends Component {
     constructor(props) {

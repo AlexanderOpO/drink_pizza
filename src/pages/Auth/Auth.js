@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import './Auth.css'
 import LoginRegister from "./LoginRegister";
-import Main from "../Navbar/Main/Main";
-import fire from "./Fire";
-import App from "../App/App";
+import Main from "../Main/Main";
+import fire from "./firebase";
+import App from "../../App/App";
 
 
 export default class Aut extends Component {

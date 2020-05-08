@@ -1,26 +1,22 @@
 import React, {Component} from 'react';
 import H from './Header.module.css'
-import {NavLink, Route} from "react-router-dom";
-import Auth from "../Auth/Auth";
-import fire from "../Auth/Fire";
-import Main from "../Navbar/Main/Main";
+import {NavLink, Route, withRouter} from "react-router-dom";
+import Auth from "../../pages/Auth/Auth";
+import fire from "../../pages/Auth/firebase";
+import Main from "../../pages/Main/Main";
 
 class Header extends Component {
-    constructor() {
-        super();
-        this.state = {
-            isInputButton: true
-        }
+    constructor(props) {
+        super(props);
     }
-    logout = () =>
-    {
+    logout() {
         fire.auth().signOut()
     }
-     onLogIn = () => {
-        this.setState({ isInputButton: !this.state.isInputButton })
+    onLogIn() {
+        // this.
+        this.props.history.push('/login')
     }
-    render()
-    {
+    render() {
         return (
             <div className={H.head}>
                 <div className={H.text}>
@@ -29,10 +25,10 @@ class Header extends Component {
                 <div className={H.Aut}>
                     <button className="InputBtn" onClick={this.onLogIn.bind(this)}>Войти</button>
                 </div>
-                {this.state.isInputButton  ?  <Main/> : <Auth/> }
+                {/* {this.state.isInputButton  ?  <Main/> : <Auth/> } */}
             </div>
         )
     }
 }
 
-export default Header;
+export default withRouter(Header);

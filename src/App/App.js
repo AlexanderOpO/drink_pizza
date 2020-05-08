@@ -1,17 +1,17 @@
 import React from 'react';
-import Header from "../Header/Header";
-import Navbar from "../Navbar/Navbar";
+import Header from "../components/Header/Header";
+import Navbar from "../components/Navbar/Navbar";
 import styles from './App.module.css';
-import Deserts from "../Navbar/Deserts/Deserts";
-import Drinks from "../Navbar/Drinks/Drinks";
-import Pizzas from "../Navbar/Pizzas/Pizzas";
-import Reviews from "../Navbar/Reviews/Reviews";
+import Deserts from "../pages/Deserts/Deserts";
+import Drinks from "../pages/Drinks/Drinks";
+import Pizzas from "../pages/Pizzas/Pizzas";
+import Reviews from "../pages/Reviews/Reviews";
 import {Route} from "react-router-dom";
-import Souces from "../Navbar/Souces/Souces";
-import Salads from "../Navbar/Salads/Salads";
-import Main from "../Navbar/Main/Main";
-import HelpJUZEPPE from "../HelpJUZEPPE/HelpJUZEPPE";
-
+import Souces from "../pages/Souces/Souces";
+import Salads from "../pages/Salads/Salads";
+import Main from "../pages/Main/Main";
+import HelpJUZEPPE from "../components/HelpJUZEPPE/HelpJUZEPPE";
+import Auth from "@/pages/Auth"
 
 
 const App = (props) => {
@@ -20,23 +20,25 @@ const App = (props) => {
             <Header/>
             <Navbar/>
             <div className={styles.Path}>
-                <Route path='/Main' render={
+                <Route path='/login' render={
+                    () => <Auth />} />
+                <Route path='/' exact="true" render={
                     () => <Main/>}/>
-                <Route path='/Deserts' render={
-                    () => <Deserts Deserts={props.State.Deserts}/>}/>
-                <Route path='/Drinks' render={
+                <Route path='/deserts' render={
+                    () => <Deserts Deserts={props.State.Deserts} />} />
+                <Route path='/drinks' render={
                     () => <Drinks Drinks={props.State.Drinks}/>}/>
-                <Route path='/Salads' render={
+                <Route path='/salads' render={
                     () => <Salads Salads={props.State.Salads}/>}/>
-                <Route path='/Souces' render={
+                <Route path='/souces' render={
                     () => <Souces Souces={props.State.Souces}/>}/>
-                <Route path='/Pizzas' render={
+                <Route path='/pizzas' render={
                     () => <Pizzas Pizzas={props.State.Pizzas}/>}/>
-                <Route path='/Reviews' render={
+                <Route path='/reviews' render={
                     () => <Reviews Reviews={props.State.Reviews}
                                    AddReview={props.AddReview}
                        updateNewReview={props.updateNewReview}/>}/>
-                <Route path='/HelpJUZEPPE' render={
+                <Route path='/help_juzeppe' render={
                     () => <HelpJUZEPPE/>}/>
 
             </div>
