@@ -1,0 +1,21 @@
+
+.app {
+  display: grid;
+  margin: 10px auto;
+  width: 100%;
+  grid-template-areas:
+          "h h"
+          "n c";
+
+  grid-template-rows:80px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap:10px;
+  background-image: url(фон.jpg);
+  background-size: 100%;
+}
+
+.Path {
+   grid-area: c;
+}
+
+

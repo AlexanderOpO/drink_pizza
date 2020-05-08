@@ -1,0 +1,25 @@
+.Ab {
+color:white;
+}
+.Inf
+{
+font-size: 20px;
+}
+
+
+.Inf img{
+    float: left;
+width: 300px;
+    margin-right: 10px;
+
+}
+
+.Veg img{
+    width: 300px;
+    float: right;
+    margin-right: 400px;
+}
+
+.Veg{
+    font-size: 20px;
+}

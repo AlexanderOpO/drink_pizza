@@ -1,0 +1,40 @@
+.all{
+
+}
+
+.back{
+    margin-top: 30px;
+    background-color: rgba(169, 169, 169, 0.45);
+    height: 500px;
+    width: 770px;
+    margin-bottom: 50px;
+}
+.all h1{
+    color: white;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+.all img{
+    float: left;
+    width: 400px;
+    margin-right: 20px;
+
+}
+.text{
+    font-size: 30px;
+    color: white;
+    margin-top: 5px;
+
+}
+
+.button{
+margin-top: 20px;
+    margin-left: 200px;
+}
+
+.Start{
+    color: white;
+    background-color: blue;
+    height: 40px;
+    width: 300px;
+}
