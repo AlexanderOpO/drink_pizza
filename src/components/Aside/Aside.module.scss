@@ -1,0 +1,32 @@
+.logo {
+    position: fixed;
+    width: 100%;
+    color: white;
+    font-size: 36px;
+    display: flex;
+    left: 2vw;
+    text-align: center;
+    // padding: 30px;
+    bottom: 3vh;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.button {
+    z-index: 1000;
+    top: 20px;
+    left: 50px;
+    position: fixed;
+    background: none;
+    padding: 8px 50px;
+    background-color: #4d8fff;
+    border: 1px solid white;
+    border-radius: 30px;
+    color: white;
+    font-size: 24px;
+    &:hover {
+        cursor: pointer;
+        background-color: white;
+        color: #4d8fff;
+    }
+}

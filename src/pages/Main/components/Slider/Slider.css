@@ -27,4 +27,5 @@
 .Slider{
     max-width: 900px;
     overflow: hidden;
+    margin-bottom: 40px;
 }

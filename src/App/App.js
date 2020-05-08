@@ -10,13 +10,13 @@ import { Route } from "react-router-dom";
 import Main from "@/pages/Main";
 import HelpJUZEPPE from "@/components/HelpJUZEPPE";
 import Auth from "@/pages/Auth"
+import Aside from "@/components/Aside"
 
 
 const App = (props) => {
     return (
         <div className={styles.app}>
-            <Header/>
-            <Navbar/>
+            <Aside />
             <div className={styles.Path}>
                 <Route path='/login' render={
                     () => <Auth />} />
