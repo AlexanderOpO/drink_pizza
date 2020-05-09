@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 
 const Aside = (props) => {
     const onLogin = () => {
-        this.props.history.push('/login')
+        props.history.push('/login')
     }
     return (
         <div className={styles.root}>
