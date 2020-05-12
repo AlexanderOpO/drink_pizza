@@ -11,7 +11,7 @@ import Main from "@/pages/Main";
 import HelpJUZEPPE from "@/components/HelpJUZEPPE";
 import Auth from "@/pages/Auth"
 import Aside from "@/components/Aside"
-
+import ShoppingBasket from "@/pages/ShoppingBasket"
 
 const App = (props) => {
     return (
@@ -22,6 +22,8 @@ const App = (props) => {
                     () => <Auth />} />
                 <Route path='/' exact={true} render={
                     () => <Main/>}/>
+                    <Route path='/shoppingbasket' render={
+                    () => <ShoppingBasket/>}/>
                 {
                     PRODUCT_CONFIG.map(({path, data, name}, index) => (
                         <Route  path={`${path}`}
@@ -36,7 +38,6 @@ const App = (props) => {
                                     updateNewReview={props.updateNewReview}/>}/>
                 <Route path='/help_juzeppe' render={
                     () => <HelpJUZEPPE/>}/>
-
             </div>
         </div>
     )
