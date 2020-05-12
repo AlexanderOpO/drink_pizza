@@ -4,17 +4,19 @@
   min-height: 100vh;
   overflow: hidden;
   grid-template-areas:
-          "h h"
+          "f f"
           "n c";
 
-  grid-template-rows:80px 1fr;
-  grid-template-columns: 2fr 10fr;
+  grid-template-rows: 1fr 7fr;
+  grid-template-columns: minmax(300px, 2fr) 10fr;
   grid-gap:10px;
   background-image: url('../assets/images/background.jpg');
   background-size: 100%;
 }
 
 .Path {
-   grid-area: c;
+  grid-area: c;
+  
 }
+
 

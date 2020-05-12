@@ -24,6 +24,9 @@ const Navbar = () => {
             <NavLink className={styles.item} to={"/help_juzeppe"}>
                 Помоги Джузеппе
             </NavLink>
+            <NavLink className={styles.item} to={"/help_juzeppe"}>
+                Добавить товар
+            </NavLink>
         </nav>
     )
 };

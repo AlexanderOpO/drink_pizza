@@ -2,7 +2,7 @@ import React from "react";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import "@/assets/styles/index.scss"
-import styles from "./App.module.css";
+import styles from "./App.module.scss";
 import ProductPage from '@/pages/Products'
 import PRODUCT_CONFIG from '@/const/products' 
 import Reviews from "@/pages/Reviews";
@@ -19,9 +19,9 @@ const App = (props) => {
     return (
         <Provider store={store}> 
         <div className={styles.app}>
-            <Aside />
+            <div className={styles.buttons}> <Aside /> </div>
             <div className={styles.Path}>
-                <Route path='/login' render={
+                <Route  path='/login' render={
                     () => <Auth />} />
                 <Route path='/' exact={true} render={
                     () => <Main/>}/>

@@ -4,9 +4,9 @@ import styles from './ShoppingBasket.module.scss'
 const ShoppingBasket = () => {
         return (
             <div className={styles.ShoppingBasket}>
-                <span>Всего блюд в корзине: </span>
-                <br/>
-                <span>Общая сумма:</span>
+                <span className={styles.item}>Всего блюд в корзине: </span>
+                
+                <span className={styles.item}>Общая сумма:</span>
             </div>
         );
 }

@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
+import {connect} from 'react-redux';
+import classnames from "classnames";
 import styles from './Aside.module.scss'
 import Navbar from '@/components/Navbar'
 import { withRouter } from "react-router-dom";
-import {connect} from 'react-redux';
 import { getNumbers } from '../../actions/getAction.js';
 
 const Aside = (props) => {
@@ -19,7 +20,7 @@ const Aside = (props) => {
     return (
         <div className={styles.root}>
             <button className={styles.button} onClick={onLogin}>Войти</button>
-            <button className={styles.buttonBasket} onClick={toBasket}>Корзина{props.basketProps.basketNumbers}
+            <button className={classnames([styles.button, styles["button-basket"]])} onClick={toBasket}>Корзина ({props.basketProps.basketNumbers})
             </button>
             <h1 className={styles.logo} onClick={() => props.history.push('/')}>Хочу<br/> наПИЦЦА </h1>
             <Navbar />
