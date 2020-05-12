@@ -4,12 +4,10 @@ import Navbar from '@/components/Navbar'
 import { withRouter } from "react-router-dom";
 
 const Aside = (props) => {
-    const onLogin = () =>
-     {
+    const onLogin = () => {
         props.history.push('/login')
     }
-    const toBasket = () =>
-    {
+    const toBasket = () => {
         props.history.push('/shoppingbasket')
     }
     return (
