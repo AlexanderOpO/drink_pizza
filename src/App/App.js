@@ -12,9 +12,12 @@ import HelpJUZEPPE from "@/components/HelpJUZEPPE";
 import Auth from "@/pages/Auth"
 import Aside from "@/components/Aside"
 import ShoppingBasket from "@/pages/ShoppingBasket"
+import {Provider} from "react-redux";
+import store from '../store.js';
 
 const App = (props) => {
     return (
+        <Provider store={store}> 
         <div className={styles.app}>
             <Aside />
             <div className={styles.Path}>
@@ -29,7 +32,7 @@ const App = (props) => {
                         <Route  path={`${path}`}
                                 exact={true}
                                 key={`route_${index}`}
-                                render={() => <ProductPage productsList={data} title={name} />} />
+                                render={() => <ProductPage productsList={data} title={name}/>} />
                     ))
                 }
                 <Route path='/reviews' render={
@@ -40,7 +43,8 @@ const App = (props) => {
                     () => <HelpJUZEPPE/>}/>
             </div>
         </div>
-    )
+        </Provider>
+    )  
 };
 
 export default App;
