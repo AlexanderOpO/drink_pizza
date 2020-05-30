@@ -31,3 +31,21 @@
     color: #4d8fff;
   }
 }
+
+.actions {
+  margin-left: 20px;
+  margin-top: 30px;
+  & > span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    color: white;
+  }
+  &-logout {
+    text-decoration: underline;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}
